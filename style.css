@@ -51,6 +51,7 @@ body {
   border: 2px solid var(--accent-color);
   box-shadow: 0 4px 20px #1c3fbd53;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
 .hero-content {
