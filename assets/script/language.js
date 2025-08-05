@@ -12,6 +12,7 @@ const translations = {
     contact_description: "Quyidagi forma orqali menga xabar yuborishingiz mumkin:",
     contact_email: "Email: ", 
     contact_send: "Xabar yuborish",
+    greating: "Men Nuralibek, Frontend Web Dasturchiman. Dasturlash yolida o'z bilimlarimni oshirish va yangi texnologiyalarni o'rganishga intilaman. Siz bilan ushbu sahifada tanishib chiqishdan mamnunman!"
   },
   en: {
     greeting: "Hi, I'm",
@@ -26,6 +27,7 @@ const translations = {
     contact_description: "You can send me a message using the form below:",
     contact_email: "Email: ",
     contact_send: "Send Message",
+    greating: "I'm Nuralibek, a Frontend Web Developer. I strive to enhance my knowledge and learn new technologies in the field of programming. I'm glad to meet you on this page!"
   },
   ru: {
     greeting: "Привет, я",
@@ -40,6 +42,7 @@ const translations = {
     contact_description: "Вы можете отправить мне сообщение, используя форму ниже:",
     contact_email: "Email: ",
     contact_send: "Отправить сообщение",
+    greating: "Я Нуралибек, Frontend веб-разработчик. Я стремлюсь повысить свои знания и изучить новые технологии в области программирования. Я рад встретить вас на этой странице!"
   }
 };
 

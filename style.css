@@ -53,6 +53,10 @@ body {
   margin-bottom: 20px;
 }
 
+.hero-content {
+  position: relative;
+}
+
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -207,6 +211,44 @@ footer {
 
 /* Optional: Small arrow icon using background SVG */
 
+.typewriter-text {
+  font-size: 18px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  position: absolute;
+  bottom: -350px;
+  left: -50px;
+  min-width: 500px;
+  height: 300px;
+
+  .mouse {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(36, 137, 238);
+    border-radius: 50%;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+      ;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
 
 .language-switcher:focus {
   outline: 2px solid var(--accent-color);
@@ -223,6 +265,7 @@ footer {
   background: var(--bg-secondary);
   color: var(--text-color);
 }
+
 /* Mobile responsive */
 @media (max-width: 500px) {
   .language-switcher {
@@ -231,6 +274,7 @@ footer {
     top: 20px;
     left: 15px;
   }
+
   .theme-switcher {
     top: 20px;
     right: 15px;
