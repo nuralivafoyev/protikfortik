@@ -56,6 +56,7 @@ body {
 
 .hero-content {
   position: relative;
+   perspective: 600px;
 }
 
 .hero-content h1 {
