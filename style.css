@@ -1,0 +1,260 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #334155;
+  --text-color: #ffffff;
+  --accent-color: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --text-muted: #94a3b8;
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #e2e8f0;
+  --text-color: #0f172a;
+  --accent-color: #0284c7;
+  --accent-hover: #0369a1;
+  --text-muted: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, var(--bg-secondary), var(--bg-card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 4px 20px #1c3fbd53;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .highlight {
+  color: var(--accent-color);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.portfolio {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 260px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--bg-primary);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+
+/*======================== theme=================== */
+.theme-switcher {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.theme-switcher .icon {
+  position: absolute;
+  font-size: 1.4rem;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.theme-switcher .moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-switcher .sun {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+[data-theme="light"] .theme-switcher .moon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+[data-theme="light"] .theme-switcher .sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-switcher:hover {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+
+/* ==================lang switch======================= */
+.language-switcher {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #ffffff;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  appearance: none;
+  z-index: 999;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Small arrow icon using background SVG */
+
+
+.language-switcher:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.language-switcher:hover {
+
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-hover));
+  color: var(--bg-primary);
+}
+
+.language-switcher option {
+  background: var(--bg-secondary);
+  color: var(--text-color);
+}
+/* Mobile responsive */
+@media (max-width: 500px) {
+  .language-switcher {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    top: 20px;
+    left: 15px;
+  }
+  .theme-switcher {
+    top: 20px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Responsivlik */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+}

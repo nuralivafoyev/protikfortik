@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Nurali Vafoyev</title>
+
+  <!-- bootstrap -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- AOS animatsiyalar -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style/nav.css">
+</head>
+<body>
+
+
+<nav class="app-navbar">
+  <div class="app-nav-container">
+    <a href="#hero" class="app-logo">Nurali<span>Dev</span></a>
+    <ul class="app-nav-links">
+      <li>
+        <a href="#hero">
+          <i class="bi bi-house"></i>
+          <span class="nav-text">Bosh sahifa</span>
+        </a>
+      </li>
+      <li>
+        <a href="#portfolio">
+          <i class="bi bi-card-heading"></i>
+          <span class="nav-text">Portfolio</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <i class="bi bi-headset"></i>
+          <span class="nav-text">Aloqa</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+  <!-- 🌍 Til tanlash -->
+  <select id="language-switcher" class="language-switcher">
+    <option value="uz">Oʻzbekcha</option>
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+  </select>
+
+  <!-- 🌙/☀️ Theme switch -->
+  <button class="theme-switcher" onclick="toggleTheme()" aria-label="Toggle Theme">
+    <span class="icon moon">🌙</span>
+    <span class="icon sun">☀️</span>
+  </button>
+
+  <section class="hero" id="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <img src="./assets/images/admin-photo.jpg" alt="admin-photo" class="hero-image" />
+      <h1><span data-i18n="greeting">Salom, men</span> <span class="highlight">Nuralibek</span></h1>
+      <p data-i18n="description">Frontend Web Dasturchiman</p>
+      <a href="#portfolio" class="btn" data-i18n="view_work">Ishlarimni ko‘rish</a>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2 data-i18n="portfolio_title" data-aos="fade-up" data-aos-duration="800">Ishlarim</h2>
+    <div class="projects">
+      
+      <a class="project-card" data-aos="zoom-in" data-aos-delay="100" href="https://zetmarket-order.vercel.app/" target="_blank">
+        <img src="assets/images/project-1.png" alt="Project 1" />
+        <h3 data-i18n="project1">ZETMARKET.ORDER</h3>
+      </a>
+
+      <a class="project-card" data-aos="zoom-in" data-aos-delay="200" href="https://fast-food-nu-woad.vercel.app/" target="_blank">
+        <img src="assets/images/project-2.png" alt="Project 2" />
+        <h3 data-i18n="project2">FAST FOOD</h3>
+      </a>
+
+      <a class="project-card" data-aos="zoom-in" data-aos-delay="300" href="https://admindashboard-three-indol.vercel.app/" target="_blank">
+        <img src="assets/images/project-3.png" alt="Project 3" />
+        <h3 data-i18n="project3">ADMIN DASHBOARD</h3>
+      </a>
+      
+    </div>
+  </section>
+
+  <footer data-aos="fade-in" data-aos-duration="800">
+    <p data-i18n="footer">© 2025 Nurali Dev</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="nav.js"></script>
+  <script src="theme.js"></script>
+  <script src="language.js"></script>
+
+</body>
+</html>

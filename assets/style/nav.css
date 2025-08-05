@@ -1,0 +1,112 @@
+.app-navbar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background: #ffffff1a;
+    border: 1px solid #ffffff40;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .app-navbar {
+    background: #0f172a80;
+    border: 1px solid #ffffff1a;
+}
+
+[data-theme="dark"] .app-navbar .app-logo span {
+    color: #ffffff;
+}
+
+.app-nav-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.app-logo span {
+    color: #000000;
+}
+
+.app-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.app-nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.app-nav-links a:hover,
+.app-nav-links a.active {
+    color: #38bdf8;
+}
+
+/* Responsive — mobile app bar style */
+@media (max-width: 768px) {
+    .app-navbar {
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        border-radius: 20px;
+        height: 65px;
+    }
+
+    .app-nav-container {
+        justify-content: space-around;
+    }
+
+    .app-logo {
+        display: none;
+    }
+
+    .app-nav-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .app-nav-links li a i {
+        display: flex;
+        align-items: center;
+        color: #3882f8;
+        border: 1px solid #fcfcfc65;
+        padding: 12px 16px;
+        border-radius: 12px;
+    }
+
+    .app-nav-links li a span {
+        display: none;
+    }
+
+    .app-nav-links li {
+        margin: 0;
+    }
+
+    .app-nav-links a {
+        font-size: 0.9rem;
+    }
+}
