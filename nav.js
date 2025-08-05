@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
 
   let current = '';
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80;
+    const sectionTop = section.offsetTop - 160;
     if (pageYOffset >= sectionTop) {
       current = section.getAttribute('id');
     }
@@ -17,3 +17,21 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.app-navbar');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop && scrollTop > 150) {
+    // Pastga scroll va 50px dan oshsa
+    navbar.classList.add('hide');
+  } else if (scrollTop < lastScrollTop) {
+    // Yuqoriga scroll bo‘lsa
+    navbar.classList.remove('hide');
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+});
+

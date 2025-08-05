@@ -7,13 +7,14 @@
     border-radius: 20px;
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    background: #ffffff1a;
+    background: #56a1f11a;
     border: 1px solid #ffffff40;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 [data-theme="dark"] .app-navbar {
@@ -66,13 +67,20 @@
 
 /* Responsive — mobile app bar style */
 @media (max-width: 768px) {
+    .app-navbar.hide {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
     .app-navbar {
         top: auto;
-        bottom: 20px;
+        bottom: 15px;
         left: 20px;
         right: 20px;
         border-radius: 20px;
-        height: 65px;
+        height: 75px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
     }
 
     .app-nav-container {
