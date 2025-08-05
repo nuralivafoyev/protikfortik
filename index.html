@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/style/nav.css">
+  <link rel="stylesheet" href="./assets/style/contact.css" />
 </head>
 <body>
+
   <nav class="app-navbar">
   <div class="app-nav-container">
     <a href="#hero" class="app-logo">Nurali<span>Dev</span></a>
@@ -85,7 +87,26 @@
     </div>
   </section>
 
-  <footer data-aos="fade-in" data-aos-duration="800">
+  <section id="contact" class="contact-section" role="region" aria-label="Aloqa bo‘limi" data-aos="fade-up" data-aos-duration="1000">
+    <h2 data-i18n="contact_title">Aloqa</h2>
+    <p data-i18n="contact_description">Quyidagi forma orqali menga xabar yuborishingiz mumkin:</p>
+    <form class="contact-form" aria-label="Aloqa formasi">
+      <input type="text" name="name" placeholder="Ismingiz" required aria-required="true" />
+      <input type="email" name="email" placeholder="Email manzilingiz" required aria-required="true" />
+      <textarea name="message" rows="5" placeholder="Xabaringiz..." required aria-required="true"></textarea>
+      <button type="submit" class="btn" data-i18n="contact_send">Yuborish</button>
+    </form>
+
+    <div class="socials">
+      <a data-aos="zoom-out" data-aos-delay="100" href="https://t.me/vafoyev_n" target="_blank"><i class="bi bi-telegram"></i>Telegram</a>
+      <a data-aos="zoom-out" data-aos-delay="200" href="https://www.instagram.com/__vafoyev__" target="_blank"><i class="bi bi-instagram"></i>Instagram</a>
+      <a data-aos="zoom-out" data-aos-delay="300" href="https://www.github.com/nuralivafoyev" target="_blank"><i class="bi bi-github"></i>GitHub</a>
+    </div>
+
+  </section>
+
+
+  <footer>
     <p data-i18n="footer">© 2025 Nurali Dev</p>
   </footer>
 
@@ -93,9 +114,9 @@
   <script>
     AOS.init();
   </script>
-  <script src="nav.js"></script>
-  <script src="theme.js"></script>
-  <script src="language.js"></script>
+  <script src="./assets/script/nav.js"></script>
+  <script src="./assets/script/theme.js"></script>
+  <script src="./assets/script/language.js"></script>
 
 </body>
 </html>

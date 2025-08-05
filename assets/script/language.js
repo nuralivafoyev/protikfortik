@@ -7,7 +7,11 @@ const translations = {
     project1: "ZETMARKET.ORDER",
     project2: "FAST FOOD",
     project3: "ADMIN DASHBOARD",
-    footer: "© 2025 Nurali Dev"
+    footer: "© 2025 Nurali Dev",
+    contact_title: "Aloqa",
+    contact_description: "Quyidagi forma orqali menga xabar yuborishingiz mumkin:",
+    contact_email: "Email: ", 
+    contact_send: "Xabar yuborish",
   },
   en: {
     greeting: "Hi, I'm",
@@ -17,7 +21,11 @@ const translations = {
     project1: "ZETMARKET.ORDER",
     project2: "FAST FOOD",
     project3: "ADMIN DASHBOARD",
-    footer: "© 2025 Nurali Dev"
+    footer: "© 2025 Nurali Dev",
+    contact_title: "Contact",
+    contact_description: "You can send me a message using the form below:",
+    contact_email: "Email: ",
+    contact_send: "Send Message",
   },
   ru: {
     greeting: "Привет, я",
@@ -27,7 +35,11 @@ const translations = {
     project1: "ZETMARKET.ORDER",
     project2: "FAST FOOD",
     project3: "ADMIN DASHBOARD",
-    footer: "© 2025 Nurali Dev"
+    footer: "© 2025 Nurali Dev",
+    contact_title: "Контакт",
+    contact_description: "Вы можете отправить мне сообщение, используя форму ниже:",
+    contact_email: "Email: ",
+    contact_send: "Отправить сообщение",
   }
 };
 
@@ -53,4 +65,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const defaultLang = "uz";
   switcher.value = defaultLang;
   applyTranslations(defaultLang);
+});
+switcher.addEventListener("change", () => {
+  const lang = switcher.value;
+  applyTranslations(lang);
+  localStorage.setItem("lang", lang);  // Tilni saqlaymiz
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "uz";
+  switcher.value = savedLang;
+  applyTranslations(savedLang);
 });
